@@ -18,7 +18,7 @@ namespace ControlFlowAndLoopPractice
 
             //CountByThrees.maximum();
 
-
+            ArrayAndListPractice.friendList();
   
         }
     }
