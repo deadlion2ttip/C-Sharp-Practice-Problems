@@ -18,7 +18,9 @@ namespace ControlFlowAndLoopPractice
 
             //CountByThrees.maximum();
 
-            ArrayAndListPractice.friendList();
+            //ArrayAndListPractice.friendList();
+
+            ArrayAndListPractice.reverseName();
   
         }
     }

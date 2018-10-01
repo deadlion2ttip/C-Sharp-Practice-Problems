@@ -8,6 +8,7 @@ namespace ControlFlowAndLoopPractice
 {
     class ArrayAndListPractice
     {
+
         static public void friendList()
         {
             var nameList = new List<string>();
@@ -36,6 +37,23 @@ namespace ControlFlowAndLoopPractice
                 int moreFriends = nameList.Count - 2;
                 Console.WriteLine("{0}, {1}, and {2} more like your post.", nameList[0], nameList[1], moreFriends);
             }
+        }
+
+        static public void reverseName()
+        {
+            Console.WriteLine("enter your name");
+
+            string nameInput = Console.ReadLine();
+
+            char [] nameArray = nameInput.ToCharArray();
+
+            Array.Reverse(nameArray);
+
+            Console.WriteLine(nameArray);
+
+            string reverseName = String.Join("", nameArray);
+       
+            Console.WriteLine(reverseName);
         }
     }
 }
