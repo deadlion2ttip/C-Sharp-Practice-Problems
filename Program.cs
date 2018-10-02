@@ -20,7 +20,9 @@ namespace ControlFlowAndLoopPractice
 
             //ArrayAndListPractice.friendList();
 
-            ArrayAndListPractice.reverseName();
+            //ArrayAndListPractice.reverseName();
+
+            ArrayAndListPractice.sortNumbers();
   
         }
     }

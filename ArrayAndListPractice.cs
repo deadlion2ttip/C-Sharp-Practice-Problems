@@ -55,5 +55,34 @@ namespace ControlFlowAndLoopPractice
        
             Console.WriteLine(reverseName);
         }
+
+        static public void sortNumbers()
+        {
+            int[] numbers = new int[5];
+            int i = 0;
+            while (i < 5)
+            {
+                Console.WriteLine("Enter a new number");
+
+                int response = int.Parse(Console.ReadLine());
+
+                if (Array.Exists(numbers, s => { return s == response; }))
+                {
+                    Console.WriteLine("Make sure you haven't entered that number already.\n");
+                }
+                else
+                {
+                    numbers[i] = response;
+                    i++;
+                }
+
+            }
+
+            Array.Sort(numbers);
+            foreach (int number in numbers)
+            {
+                Console.Write(number);
+            }
+        }
     }
 }
