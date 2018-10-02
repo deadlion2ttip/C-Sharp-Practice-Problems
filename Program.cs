@@ -26,8 +26,10 @@ namespace ControlFlowAndLoopPractice
 
             //ArrayAndListPractice.onlyUnique();
 
-            ArrayAndListPractice.threeSmallest();
-  
+            //ArrayAndListPractice.threeSmallest();
+
+            StringManipulation.isConsecutive();
+
         }
     }
 }
