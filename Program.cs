@@ -22,7 +22,9 @@ namespace ControlFlowAndLoopPractice
 
             //ArrayAndListPractice.reverseName();
 
-            ArrayAndListPractice.sortNumbers();
+            //ArrayAndListPractice.sortNumbers();
+
+            ArrayAndListPractice.onlyUnique();
   
         }
     }

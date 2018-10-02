@@ -84,5 +84,44 @@ namespace ControlFlowAndLoopPractice
                 Console.Write(number);
             }
         }
+
+        static public void onlyUnique()
+        {
+            var numbers = new List<int>();
+
+            var doubles = new List<int>();
+
+            while (true)
+            {
+                Console.WriteLine("Enter a number or type quit");
+
+                string response = Console.ReadLine();
+
+                if (response == "quit" || response == "Quit")
+                {
+                    break;
+                }
+                else
+                {
+                    int numberEntered = int.Parse(response);
+
+                    if (numbers.IndexOf(numberEntered) >= 0)
+                        doubles.Add(numberEntered);
+                    else
+                    numbers.Add(numberEntered);
+                }
+
+            }
+
+            foreach (int duplicate in doubles)
+            {
+                numbers.RemoveAll(i => { return i == duplicate; });
+            }
+
+            foreach (int num in numbers)
+            {
+                Console.WriteLine(num);
+            }
+        }
     }
 }
