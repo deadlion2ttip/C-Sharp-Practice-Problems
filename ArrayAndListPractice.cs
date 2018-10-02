@@ -123,5 +123,35 @@ namespace ControlFlowAndLoopPractice
                 Console.WriteLine(num);
             }
         }
+
+        static public void threeSmallest()
+        {
+            Console.WriteLine("Enter a list of numbers!");
+
+            string response = Console.ReadLine();
+
+            string[] responseArray = response.Split(',');
+
+            if (responseArray.Length < 5)
+            {
+                Console.WriteLine("invalid list");
+                threeSmallest();
+            }
+
+            int[] responseInts = new int[responseArray.Length];
+
+            for (int i = 0; i < responseArray.Length; i++)
+            {
+                responseInts[i] = int.Parse(responseArray[i]);
+                Console.WriteLine(responseInts[i]);
+            }
+
+            Array.Sort(responseInts);
+
+            for (int j = 0; j < 3; j++)
+            {
+                Console.Write(responseInts[j]);
+            }
+        }
     }
 }

@@ -24,7 +24,9 @@ namespace ControlFlowAndLoopPractice
 
             //ArrayAndListPractice.sortNumbers();
 
-            ArrayAndListPractice.onlyUnique();
+            //ArrayAndListPractice.onlyUnique();
+
+            ArrayAndListPractice.threeSmallest();
   
         }
     }
