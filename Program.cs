@@ -28,8 +28,11 @@ namespace ControlFlowAndLoopPractice
 
             //ArrayAndListPractice.threeSmallest();
 
-            StringManipulation.isConsecutive();
+            //StringManipulation.isConsecutive();
 
+            //StringManipulation.areDuplicates();
+
+            StringManipulation.timeIsValid();
         }
     }
 }
