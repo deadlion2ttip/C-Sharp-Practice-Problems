@@ -14,6 +14,49 @@ namespace ControlFlowAndLoopPractice
             return Console.ReadLine().Trim();
         }
 
+        public static void numberOfVowels()
+        {
+            string response = solicitInput("an english word: ");
+
+            char[] letters = response.ToLower().ToCharArray();
+
+            char[] vowels = new char[5] { 'a', 'e', 'i', 'o', 'u' };
+
+            int vowelCount = 0;
+
+            foreach (char letter in letters)
+            {
+                if (vowels.Contains(letter))
+                {
+                    vowelCount++;
+                }
+            }
+
+            Console.WriteLine(vowelCount);
+        }
+
+        static public void PascalCase()
+        {
+            string response = solicitInput("a phrase: ");
+
+            string[] words = response.Split(' ');
+
+            var variableName = new StringBuilder();
+
+            foreach (string word in words)
+            {
+                var capitalizedWord = new StringBuilder();
+                capitalizedWord.Append(word.ToUpper()[0]);
+                Console.WriteLine(capitalizedWord);
+                capitalizedWord.Append(word.ToLower().Substring(1));
+                Console.WriteLine(capitalizedWord);
+
+                variableName.Append(capitalizedWord);
+            }
+
+            Console.WriteLine(variableName);
+        }
+
         static public void timeIsValid()
         {
             string response = solicitInput("a 24-hour time (15:37)");

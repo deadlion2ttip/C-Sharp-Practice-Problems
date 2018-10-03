@@ -32,7 +32,11 @@ namespace ControlFlowAndLoopPractice
 
             //StringManipulation.areDuplicates();
 
-            StringManipulation.timeIsValid();
+            //StringManipulation.timeIsValid();
+
+            //StringManipulation.PascalCase();
+
+            StringManipulation.numberOfVowels();
         }
     }
 }
