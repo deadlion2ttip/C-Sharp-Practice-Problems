@@ -16,34 +16,68 @@ namespace ControlFlowAndLoopPractice
         static public void isConsecutive()
         {
             string response = solicitInput("hyphen separated numbers");
+            countsUp(response);
 
+            if (countsUp(response) || countsDown(response))
+                Console.WriteLine("Consecutive");
+
+            else
+                Console.WriteLine("not Consecutive");
+        }
+
+        private static bool countsUp(string response)
+        {
             string[] charArray = response.Split('-');
 
-            int last = int.Parse(charArray[0]);
+            int first = int.Parse(charArray[0]);
 
             bool consecutiveFlag = true;
 
-            for (int i =1; i< charArray.Length; i++)
+            for (int i = 1; i < charArray.Length; i++)
             {
                 int currentInt = int.Parse(charArray[i]);
-                if(currentInt - last == 1 || currentInt - last == -1)
+                if (currentInt - first == i)
                 {
-                    Console.WriteLine(currentInt - last);
-                    last = currentInt;
+                    Console.WriteLine(currentInt - i);
+                   
                     continue;
                 }
 
-                Console.WriteLine(currentInt - last);
+                Console.WriteLine(currentInt - i);
                 consecutiveFlag = false;
                 break;
 
             }
 
-            if (consecutiveFlag)
-            Console.WriteLine("Consecutive");
-
-            else
-                Console.WriteLine("not Consecutive");
+            return consecutiveFlag;
         }
+
+        private static bool countsDown(string response)
+        {
+            string[] charArray = response.Split('-');
+
+            int first = int.Parse(charArray[0]);
+
+            bool consecutiveFlag = true;
+
+            for (int i = 1; i < charArray.Length; i++)
+            {
+                int currentInt = int.Parse(charArray[i]);
+                if (currentInt - first == -i)
+                {
+                    Console.WriteLine(currentInt - i);
+                   
+                    continue;
+                }
+
+                Console.WriteLine(currentInt - i);
+                consecutiveFlag = false;
+                break;
+
+            }
+
+            return consecutiveFlag;
+        }
+
     }
 }
