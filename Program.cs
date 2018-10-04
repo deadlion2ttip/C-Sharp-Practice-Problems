@@ -36,7 +36,13 @@ namespace ControlFlowAndLoopPractice
 
             //StringManipulation.PascalCase();
 
-            StringManipulation.numberOfVowels();
+            //StringManipulation.numberOfVowels();
+
+            string testFile = @"D:\Documents\Professional\Job hunting\Griffin.Resume.Software.txt";
+
+            //Console.WriteLine(FileManipulation.numberOfWords(testFile));
+
+            Console.WriteLine(FileManipulation.longestWord(testFile));
         }
     }
 }
